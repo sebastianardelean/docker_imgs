@@ -1,4 +1,4 @@
-##Create directories
+## Create directories
 
 ```
 mkdir jenkins-docker 
@@ -8,7 +8,7 @@ mkdir jenkins-docker
 cd jenkins-docker
 ```
 
-##Build
+## Build
 
 ```
 docker build -t jenkins-data -f Dockerfile-data .
@@ -18,7 +18,7 @@ docker build -t jenkins-data -f Dockerfile-data .
 docker build -t jenkins .
 ```
 
-##Run
+## Run
 
 ```
 docker run --name=jenkins-data jenkins-data
