@@ -1,4 +1,4 @@
-##Create directories
+## Create directories
 
 ```
 mkdir r-docker
@@ -8,23 +8,23 @@ mkdir r-docker
 cd r-docker
 ```
 
-##Build
+## Build
 
 ```
 docker build -t r-docker .
 ```
 
 
-##Run
+## Run
 
 
 
-###Run interactively
+### Run interactively
 
 ```
 docker run -ti --rm r-scripts
 ```
-###Run in batch mode
+### Run in batch mode
 
 ```
 docker run -ti --name=r-scripts --mount type=bind,source="$(pwd)",target=/home/docker/scripts r-docker
