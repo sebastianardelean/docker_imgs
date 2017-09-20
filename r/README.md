@@ -27,7 +27,8 @@ docker run -ti --rm r-scripts
 ### Run in batch mode
 
 ```
-docker run -ti --name=r-scripts --mount type=bind,source="$(pwd)",target=/home/docker/scripts r-docker
+docker run -ti --mount type=bind,source="$(pwd)",target=/home/docker/scripts r-docker /usr/bin/bash
+
 ```
 
 ```
