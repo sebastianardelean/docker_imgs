@@ -22,7 +22,7 @@ docker build -t r-docker .
 ### Run interactively
 
 ```
-docker run -ti --rm r-scripts
+docker run -ti r-docker
 ```
 ### Run in batch mode
 
@@ -32,7 +32,7 @@ docker run -ti --mount type=bind,source="$(pwd)",target=/home/docker/scripts r-d
 ```
 
 ```
-docker run -ti --rm r-scripts /usr/bin/bash
+docker run -ti --rm r-docker /usr/bin/bash
 ```
 
 
