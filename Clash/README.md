@@ -36,3 +36,13 @@ docker run -ti --rm clash-docker
 ```
 
 
+Or, using background container
+
+```
+docker run -d --name devtest -it --mount type=bind,source="$(pwd)",target=/home/docker/scripts clash-docker 
+```
+
+And use 
+
+```
+docker container exec name_container command
