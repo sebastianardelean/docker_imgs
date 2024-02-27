@@ -1,0 +1,1 @@
+docker run -p 8888:8888 -it -v c:\Users\sardelean\Documents\Docker\hdl\work:/app --entrypoint /bin/bash hdl

@@ -1,5 +1,13 @@
-FROM fpco/stack-build:lts-10.0
-USER root
-WORKDIR /home/docker/scripts
-ARG STACK_VERSION=1.6.3
-RUN wget -qO- https://github.com/commercialhaskell/stack/releases/download/v$STACK_VERSION/stack-$STACK_VERSION-linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C /usr/local/bin '*/stack'
+FROM haskell:latest
+WORKDIR /app
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        libblas-dev \
+        liblapack-dev \
+        postgresql postgresql-contrib && \
+    rm -rf /var/lib/apt/lists/*
+
+
+RUN cabal update
+EXPOSE 88
